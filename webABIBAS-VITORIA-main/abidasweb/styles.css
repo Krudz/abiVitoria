@@ -10,6 +10,164 @@
         background-color: #ffffff;
     }
 
+
+
+
+    .nav {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1em;
+    }
+
+    .navletra {
+        font-family: nav;
+        font-size: 5em;
+        text-align: center;
+        text-transform: capitalize;
+        text-shadow: 5px 5px 0px rgb(158, 158, 158);
+        background-color: #ffffff;
+        margin-top: 0.5em;
+    }
+
+
+
+    .nav ul {
+        list-style-type: none;
+        overflow: hidden;
+        background-color: #ffffff;
+        margin-left: 0em;
+    }
+
+    .nav img {
+        height: 2em;
+    }
+
+    .nav li {
+        display: inline-flex;
+    }
+
+    .nav label {
+        box-sizing: border-box;
+        display: inline-block;
+        border-radius: 5px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .nav label {
+        display: none;
+        user-select: none;
+
+    }
+
+    .nav input[type="text"] {
+        height: 2em;
+        width: 15em;
+        margin-left: 5em;
+    }
+
+    #menu {
+        appearance: none;
+    }
+
+    /*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+    .filtro {
+        width: 130px;
+        padding: 5px;
+        background-color: #f4f4f4;
+        height: 71.5%;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        overflow-y: auto;
+        border-radius: 10%;
+    }
+
+    .filtro h2 {
+        margin-bottom: 10px;
+    }
+
+    .filtro label {
+        display: flex;
+        margin: 5px 0;
+    }
+
+    .contenedorRopa {
+        margin-left: 131px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        gap: 2em;
+        padding: 20px;
+    }
+
+    .ropa {
+        width: auto;
+        height: 20em;
+        max-width: 100%;
+        text-align: center;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .ropa img {
+        width: auto;
+        height: 100%;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 20%;
+    }
+    
+    .ropa:hover img {
+        transform: scale(1.1);
+    }
+    
+    .infoRopa {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 25%;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 10px;
+        box-sizing: border-box;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        text-align: center;
+        border-radius: 10%;
+    }
+    
+    .ropa:hover .infoRopa {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .pieFlexibleContenedor{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .pieFlexibleContenedor > div{
+        width: 23em;
+        text-align: center;
+        height: auto;
+    }
+
+    /*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
     @font-face {
         font-family: nav;
         src: url(estilonav/Fashionable.ttf);
@@ -212,8 +370,11 @@
 
     .pie-de-pagina {
         background-color: #414040;
-        max-width: 100%;
-        height: 3em;
+        height: 24em;
+        display: flex;
+        position: absolute;
+        width: 100%;
+        flex-direction: column  ;
     }
 
     .redes {
@@ -250,6 +411,8 @@
         padding: 0;
     }
 
+    
+
 }
 
 @media(min-width: 1080px) and (max-width:2500px) {
@@ -267,16 +430,37 @@
 
 
     /* ---------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+    .filtro {
+        width: 250px;
+        padding: 20px;
+        background-color: #f4f4f4;
+        height: 53%;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        overflow-y: auto;
+        border-radius: 10%;
+    }
+
+    .filtro h2 {
+        margin-bottom: 10px;
+    }
+
+    .filtro label {
+        display: flex;
+        margin: 5px 0;
+    }
 
     .contenedorRopa {
+        margin-left: 270px;
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
         align-content: flex-start;
         gap: 2em;
-        /* border: 1px solid black; */
+        padding: 20px;
     }
-    
+
     .ropa {
         width: auto;
         height: 30em;
@@ -284,7 +468,6 @@
         text-align: center;
         overflow: hidden;
         position: relative;
-        /* border: 1px solid red; */
     }
     
     .ropa img {
@@ -296,35 +479,14 @@
     
     .ropa:hover img {
         transform: scale(1.1);
-        /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); */
-        /* opacity: 0.5; */
-    }
-    
-    .textoRopa {
-        height: 5em;
-        width: auto;
-        background-color: white;
-    }
-    
-    .corazonRopa {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        background-color: white;
-        border: 1px solid lightgray;
-        color: rgb(160, 170, 180);
-        height: 2em;
-        width: 2em;
-        border-radius: 50%;
-        font-size: 18px;
     }
     
     .infoRopa {
         position: absolute;
-        bottom: 0; /* Posiciona el cuadro en la parte inferior */
+        bottom: 0;
         left: 0;
-        width: 100%; /* Hace que ocupe todo el ancho de la imagen */
-        height: 25%; /* 25% del alto de la imagen */
+        width: 100%;
+        height: 25%;
         background-color: rgba(0, 0, 0, 0.7);
         color: white;
         padding: 10px;
@@ -339,10 +501,6 @@
     .ropa:hover .infoRopa {
         opacity: 1;
         visibility: visible;
-    }
-    
-    .infoRopa p {
-        margin: 0.5em 0;
     }
     
 
@@ -664,7 +822,8 @@
         flex-direction: row;
         background-color: #cac3bd;
         padding: 1em;
-
+        position: absolute;
+        width: 100%;
 
     }
 
