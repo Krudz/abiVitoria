@@ -10,15 +10,11 @@
         background-color: #ffffff;
     }
 
-
-
-
     .nav {
         display: flex;
         align-items: center;
         flex-direction: column;
         justify-content: space-between;
-        padding: 1em;
     }
 
     .navletra {
@@ -37,7 +33,7 @@
         list-style-type: none;
         overflow: hidden;
         background-color: #ffffff;
-        margin-left: 0em;
+        margin-left: -10em;
     }
 
     .nav img {
@@ -75,13 +71,33 @@
         appearance: none;
     }
 
+
+
+
+    .nav li a {
+        display: block;
+        color: gainsboro;
+        color: #8c8786;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        text-transform: uppercase;
+        margin-left: 10em;
+    }
+
+    .nav li a:hover:not(.active) {
+        border-bottom: 2px solid #8c8786;
+        color: #d4cdc3;
+    }
+
+ 
     /*-----------------------------------------------------------------------------------------------------------------------------------------------*/
 
     .filtro {
         width: 130px;
         padding: 5px;
         background-color: #f4f4f4;
-        height: 71.5%;
+        height: 59.5%;
         position: fixed;
         left: 0;
         bottom: 0;
@@ -99,7 +115,7 @@
     }
 
     .contenedorRopa {
-        margin-left: 131px;
+        margin-left: 115px;
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
@@ -253,7 +269,14 @@
         align-items: center;
         flex-direction: column;
     }
-
+    .titlenovedades h1{
+        font-family: nav;
+        font-size: 3em;
+        text-transform: capitalize;
+        margin-top: 0.3em;
+        margin-bottom: 0.3em;
+        margin-left: 3em;
+    }
     .titlenovedades h2 {
         font-family: nav;
         font-size: 4em;
